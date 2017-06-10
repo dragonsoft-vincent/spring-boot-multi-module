@@ -1,5 +1,6 @@
-package com.ktjr.ktwd.core.service.vo;
+package com.ktjr.ktwd.core.service;
 
+import com.ktjr.ktwd.core.service.vo.UserCostSummaryVO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

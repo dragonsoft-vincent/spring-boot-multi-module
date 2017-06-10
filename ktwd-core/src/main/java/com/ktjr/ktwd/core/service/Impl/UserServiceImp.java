@@ -1,11 +1,11 @@
-package com.ktjr.ktwd.core.service.vo.Impl;
+package com.ktjr.ktwd.core.service.Impl;
 
 import com.google.common.collect.Lists;
 import com.ktjr.ktwd.core.domain.Hobby;
 import com.ktjr.ktwd.core.domain.User;
 import com.ktjr.ktwd.core.repository.HobbyRepository;
 import com.ktjr.ktwd.core.repository.UserRepository;
-import com.ktjr.ktwd.core.service.vo.UserService;
+import com.ktjr.ktwd.core.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

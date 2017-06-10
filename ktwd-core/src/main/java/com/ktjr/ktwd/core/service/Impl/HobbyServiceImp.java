@@ -1,7 +1,7 @@
-package com.ktjr.ktwd.core.service.vo.Impl;
+package com.ktjr.ktwd.core.service.Impl;
 
 import com.ktjr.ktwd.core.repository.HobbyRepository;
-import com.ktjr.ktwd.core.service.vo.HobbyService;
+import com.ktjr.ktwd.core.service.HobbyService;
 import com.ktjr.ktwd.core.service.vo.UserCostSummaryVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

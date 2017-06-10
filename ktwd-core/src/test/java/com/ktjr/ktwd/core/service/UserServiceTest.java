@@ -2,7 +2,6 @@ package com.ktjr.ktwd.core.service;
 
 
 import com.ktjr.ktwd.core.CoreApplication;
-import com.ktjr.ktwd.core.service.vo.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

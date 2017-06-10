@@ -1,4 +1,4 @@
-package com.ktjr.ktwd.core.service.vo;
+package com.ktjr.ktwd.core.service;
 
 
 import com.ktjr.ktwd.core.domain.User;

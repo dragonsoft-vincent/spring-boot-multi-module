@@ -2,9 +2,9 @@ package com.ktjr.ktwd.web.controller;
 
 
 import com.ktjr.ktwd.core.domain.User;
-import com.ktjr.ktwd.core.service.vo.HobbyService;
+import com.ktjr.ktwd.core.service.HobbyService;
 import com.ktjr.ktwd.core.service.vo.UserCostSummaryVO;
-import com.ktjr.ktwd.core.service.vo.UserService;
+import com.ktjr.ktwd.core.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -10,7 +10,6 @@ import com.ktjr.ktwd.core.domain.User;
 import com.ktjr.ktwd.core.repository.HobbyRepository;
 import com.ktjr.ktwd.core.repository.UserRepository;
 import com.ktjr.ktwd.core.service.Impl.UserServiceImp;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
@@ -44,17 +43,14 @@ public class UserServiceTest {
     @MockBean
     private HobbyRepository hobbyRepository;
 
-    @Before
-    public void setUp() {
-        User alex = new User("alex@163.com", "Alex", 30);
-
-        Mockito.when(userService.getUserByName(alex.getName()))
-                .thenReturn(alex);
-    }
-
     @Test
     public void testGetUserByName() {
+
         String name = "Alex";
+
+        User alex = new User("alex@163.com", name, 30);
+        Mockito.when(userService.getUserByName(alex.getName()))
+                .thenReturn(alex);
         User found = userService.getUserByName(name);
 
         assertThat(found.getName()).isEqualTo(name);

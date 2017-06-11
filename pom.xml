@@ -16,7 +16,7 @@
 	<modules>
 		<module>ktwd-core</module>
 		<module>ktwd-web</module>
-		<module>admin</module>
+		<module>ktwd-admin</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

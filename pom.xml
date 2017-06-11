@@ -14,12 +14,18 @@
 		<java.version>1.7</java.version>
 	</properties>
 	<modules>
+		<module>ktwd-bank</module>
 		<module>ktwd-core</module>
 		<module>ktwd-web</module>
 		<module>ktwd-admin</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>com.ktjr</groupId>
+				<artifactId>ktwd-bank</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>com.ktjr</groupId>
 				<artifactId>ktwd-core</artifactId>

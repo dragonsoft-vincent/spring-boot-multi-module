@@ -1,35 +1,62 @@
 package com.ktjr.ktwd.core.service;
 
-import com.google.common.collect.Lists;
+/**
+ *
+ * @author vincentchen
+ * @date 17/6/11.
+ */
+
+import com.ktjr.ktwd.core.domain.User;
+import com.ktjr.ktwd.core.repository.HobbyRepository;
 import com.ktjr.ktwd.core.repository.UserRepository;
 import com.ktjr.ktwd.core.service.Impl.UserServiceImp;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.mockito.Mockito.verify;
-import static org.mockito.MockitoAnnotations.initMocks;
+import static org.assertj.core.api.Assertions.assertThat;
 
+
+@RunWith(SpringRunner.class)
 public class UserServiceTest {
 
-    @Mock
-    private UserRepository repository;
+    @TestConfiguration
+    static class UserServiceImplTestContextConfiguration {
 
-    @InjectMocks
-    private UserServiceImp service;
-
-
-    @Before
-    public void initialize() {
-        initMocks(this);
+        @Bean
+        public UserService userService() {
+            return new UserServiceImp();
+        }
     }
 
+    @Autowired
+    private UserService userService;
+
+    @MockBean
+    private UserRepository userRepository;
+
+    @MockBean
+    private HobbyRepository hobbyRepository;
+
+    @Before
+    public void setUp() {
+        User alex = new User("alex@163.com", "Alex", 30);
+
+        Mockito.when(userService.getUserByName(alex.getName()))
+                .thenReturn(alex);
+    }
 
     @Test
-    public void find() {
-        String name = "vincent";
-        service.getUserByName(name);
-        verify(repository).findByName(Lists.newArrayList("vincent"));
+    public void testGetUserByName() {
+        String name = "Alex";
+        User found = userService.getUserByName(name);
+
+        assertThat(found.getName()).isEqualTo(name);
     }
 }

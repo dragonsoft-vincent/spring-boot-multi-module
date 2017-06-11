@@ -1,33 +1,35 @@
 package com.ktjr.ktwd.core.service;
 
-
-import com.ktjr.ktwd.core.CoreApplication;
+import com.google.common.collect.Lists;
+import com.ktjr.ktwd.core.repository.UserRepository;
+import com.ktjr.ktwd.core.service.Impl.UserServiceImp;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 
-import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.verify;
+import static org.mockito.MockitoAnnotations.initMocks;
 
-/**
- *
- * @author vincentchen
- * @date 17/5/31.
- *
- */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = CoreApplication.class)
-@WebAppConfiguration
 public class UserServiceTest {
 
-    @Autowired
-    private UserService userService;
+    @Mock
+    private UserRepository repository;
 
-    @Test
-    public void getOldestUserName() {
-        assertEquals("Vincent", userService.getOldestUser());
+    @InjectMocks
+    private UserServiceImp service;
+
+
+    @Before
+    public void initialize() {
+        initMocks(this);
     }
 
+
+    @Test
+    public void find() {
+        String name = "vincent";
+        service.getUserByName(name);
+        verify(repository).findByName(Lists.newArrayList("vincent"));
+    }
 }

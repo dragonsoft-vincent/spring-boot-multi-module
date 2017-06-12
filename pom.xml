@@ -15,20 +15,22 @@
 	</properties>
 	<modules>
 		<module>ktwd-bank</module>
-		<module>ktwd-core</module>
 		<module>ktwd-web</module>
 		<module>ktwd-admin</module>
+		<module>ktwd-common</module>
+		<module>ktwd-user</module>
+		<module>ktwd-product</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>com.ktjr</groupId>
-				<artifactId>ktwd-bank</artifactId>
+				<artifactId>ktwd-common</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.ktjr</groupId>
-				<artifactId>ktwd-core</artifactId>
+				<artifactId>ktwd-bank</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>

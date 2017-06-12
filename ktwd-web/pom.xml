@@ -10,7 +10,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.ktjr</groupId>
-			<artifactId>ktwd-core</artifactId>
+			<artifactId>ktwd-user</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ktjr</groupId>
+			<artifactId>ktwd-product</artifactId>
 			<version>1.0</version>
 		</dependency>
 		<dependency>

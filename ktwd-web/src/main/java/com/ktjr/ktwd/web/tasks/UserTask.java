@@ -1,6 +1,6 @@
 package com.ktjr.ktwd.web.tasks;
 
-import com.ktjr.ktwd.core.service.UserService;
+import com.ktjr.ktwd.user.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -11,13 +11,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class WebApplication {
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder()
-			.bannerMode(Banner.Mode.CONSOLE)
-			.sources(UserApplication.class,
-					ProductApplication.class,
-					WebApplication.class)
-			.run(args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder()
+                .bannerMode(Banner.Mode.CONSOLE)
+                .sources(UserApplication.class,
+                        ProductApplication.class,
+                        WebApplication.class)
+                .run(args);
+    }
 
 }

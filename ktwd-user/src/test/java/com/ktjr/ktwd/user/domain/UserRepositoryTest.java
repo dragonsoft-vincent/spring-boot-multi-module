@@ -1,7 +1,6 @@
 package com.ktjr.ktwd.user.domain;
 
 /**
- *
  * @author vincentchen
  * @date 17/6/11.
  */

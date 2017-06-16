@@ -6,7 +6,6 @@ import com.ktjr.ktwd.user.domain.User;
 import java.util.List;
 
 /**
- *
  * @author vincentchen
  * @date 17/5/26.
  */

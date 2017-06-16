@@ -19,20 +19,20 @@ import javax.persistence.Table;
 @Data
 @NoArgsConstructor
 public class User extends UUIDEntity {
-  
-  private String email;
-  
-  private String name;
 
-  private int age;
+    private String email;
 
-  public User(String id) {
-    super.setId(id);
-  }
+    private String name;
 
-  public User(String email, String name, int age) {
-    this.email = email;
-    this.name = name;
-    this.age = age;
-  }
+    private int age;
+
+    public User(String id) {
+        super.setId(id);
+    }
+
+    public User(String email, String name, int age) {
+        this.email = email;
+        this.name = name;
+        this.age = age;
+    }
 }

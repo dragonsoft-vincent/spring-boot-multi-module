@@ -1,7 +1,6 @@
 package com.ktjr.ktwd.user.service;
 
 /**
- *
  * @author vincentchen
  * @date 17/6/11.
  */

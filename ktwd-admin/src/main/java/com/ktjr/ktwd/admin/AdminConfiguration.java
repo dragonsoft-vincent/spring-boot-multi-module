@@ -34,7 +34,7 @@ public class AdminConfiguration extends WebMvcConfigurerAdapter {
         protected final Log logger = LogFactory.getLog(getClass());
 
         private Integer port;
-        private Boolean ssl= true;
+        private Boolean ssl = true;
         private Boolean secure = true;
         private String scheme = "https";
         private File keystore;
